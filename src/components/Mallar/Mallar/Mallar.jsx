@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./mallar.css";
+import "./Mallar.css";
 import Ärendereg from "./Ärendereg";
 import Samtalsex from "./Samtalsex";
 import Nordea from "./Nordea";
