@@ -1,0 +1,453 @@
+{
+  "checklistor": [
+    {
+      "kategori": "Samtal",
+      "problem": [
+        {
+          "namn": "Inkommande samtal",
+          "checklistor": [
+            "Ifall problemet är platsrelaterat, se checklistan 'Täckning'",
+            "Kontrollera att abonnemanget är aktivt",
+            "Kontrollera att NP-styrning är korrekt",
+            "Kontrollera att VoLTE är aktivt",
+            "Vid Tele2 Växel, kontrollera användarens regler",
+            "Vid MEX, kontrollera ifall det fungerar vid 'disconnected' MEX",
+            "Kontrollera samtalsspårning i OSIX. Finns det några felkoder eller annorlunda beteende?",
+            {
+              "checklista": "Kontrollera nedan inställningar på användarens telefon",
+              "länkar": [
+                {
+                  "text": "Stör ej",
+                  "url": [
+                    "https://support.apple.com/sv-se/HT204321",
+                    "https://manualer.alingsas.se/manualer/aktivera-stor-ej-pa-din-samsung/"
+                  ]
+                },
+                {
+                  "text": "Tysta ned okända uppringare",
+                  "url": [
+                    "https://support.apple.com/sv-se/HT207099",
+                    "https://www.samsung.com/se/support/mobile-devices/hur-du-staller-in-samtalsinstallningar-pa-en-android-telefon/"
+                  ]
+                },
+                {
+                  "text": "Blockerade nummer",
+                  "url": [
+                    "https://support.apple.com/sv-se/guide/iphone/iphe4b3f7823/ios",
+                    "https://www.samsung.com/se/support/mobile-devices/hur-du-staller-in-samtalsinstallningar-pa-en-android-telefon/"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "namn": "Utgående samtal",
+          "checklistor": [
+            "Ifall man bara har problem att ringa till ett specifikt nummer, se checklistan 'Ringa specifikt nummer'",
+            "Ifall problemet är platsrelaterat, se checklistan 'Täckning'",
+            "Kontrollera att abonnemanget är aktivt",
+            "Kontrollera att IN-Service är korrekt (Admintool)",
+            "Kontrollera att VoLTE är aktivt",
+            "Vid Tele2 Växel, kontrollera användarens regler",
+            "Vid MEX, kontrollera ifall det fungerar vid 'disconnected' MEX",
+            "Kontrollera samtalsspårning i OSIX. Finns det några felkoder eller annorlunda beteende?"
+          ]
+        },
+        {
+          "namn": "Ringa utlandet",
+          "checklistor": [
+            "Ifall man bara har problem att ringa till ett specifikt nummer, se checklistan 'Ringa specifikt nummer'",
+            "Kontrollera att abonnemanget är aktivt",
+            "Kontrollera att det inte finns spärrar för internationella samtal",
+            "Kontrollera att IN-Service är korrekt (Admintool)",
+            "Kontrollera att VoLTE är aktivt",
+            "Vid Tele2 Växel, kontrollera användarens regler",
+            "Kontrollera samtalsspårning i OSIX. Finns det några felkoder eller annorlunda beteende?",
+            "Ifall flera är påverkade av samma fel, kan man eskalera ärendet till Traffic Management"
+          ]
+        },
+        {
+          "namn": "Ringa specifikt nummer",
+          "checklistor": [
+            "I majoriteten av fallen så brukar felet ligga hos B-parten",
+            "Kontrollera att B-nummer har korrekt NP-styrning mot sin rätta operatör",
+            "Om B-part enbart har problem att ta mot samtal från denna A-part, bör B-part kontrollera att A-nummer inte är blockerat i sin telefon",
+            "Om B-part har problem att ta emot samtal från flera/alla inringare, bör denna felanmäla till sin operatör"
+          ]
+        }
+      ]
+    },
+    {
+      "kategori": "MMS",
+      "problem": [
+        {
+          "namn": "Inkommande och/eller utgående MMS",
+          "checklistor": [
+            "Kontrollera att abonnemanget inte är spärrat för MMS",
+            "Kontrollera ifall MMSet syns i MMSC",
+            {
+              "title": "Om MMset syns i MMSC:",
+              "subList": [
+                "Kontrollera om det finns någon felkod på MMSet",
+                "Om det finns en felkod, sök på felkoden i Confluence",
+                "Om det inte finns en felkod, bör MMSet ha levererats korrekt. Problem kan möjligen ligga hos B-parten"
+              ]
+            },
+            {
+              "title": "Om MMset inte syns i MMSC:",
+              "subList": [
+                "Kontrollera att användaren har korrekt APN-inställningar i sin telefon",
+                "Testa att nollställa nätverksinställningar i telefonen"
+              ]
+            },
+            "Ifall inget av ovan fungerar, be användaren testa sitt SIM-kort i en annan telefon"
+          ]
+        },
+        {
+          "namn": "APN för iPhone",
+          "checklistor": [
+            {
+              "title": "Inställningarna hittas under:",
+              "subList": ["Inställningar > Mobilnät > Mobilt datanätverk"]
+            },
+            {
+              "title": "Mobildata:",
+              "subList": [
+                "APN: internet.tele2.se",
+                "Användarnamn: *blankt*",
+                "Lösenord: *blankt*"
+              ]
+            },
+            {
+              "title": "MMS:",
+              "subList": [
+                "APN: internet.tele2.se",
+                "Användarnamn: *blankt*",
+                "Lösenord: *blankt*",
+                "MMSC: http://mmsc.tele2.se",
+                "MMS-proxy: mmsproxy.tele2.se:8080",
+                "MMS-maxstorlek: 2097152",
+                "MMS UA Prof URL: *blankt*"
+              ]
+            },
+            {
+              "title": "Internetdelning:",
+              "subList": [
+                "APN: internet.tele2.se",
+                "Användarnamn: *blankt*",
+                "Lösenord: *blankt*"
+              ]
+            }
+          ]
+        },
+        {
+          "namn": "APN för Samsung",
+          "checklistor": [
+            {
+              "title": "Inställningarna hittas under:",
+              "subList": [
+                "Inställningar > Anslutningar > Mobilnätverk > Åtkomstpunktsnamn"
+              ]
+            },
+            {
+              "title": "Skriv in följande inställningar:",
+              "subList": [
+                "Namn: Tele2 Services",
+                "APN: internet.tele2.se",
+                "Proxy: *inte inställt*",
+                "Port: *inte inställt*",
+                "Användarnamn: *inte inställt*",
+                "Lösenord: *inte inställt*",
+                "Server: *inte inställt*",
+                "MMSC: http://mmsc.tele2.se",
+                "MMS-proxy: mmsproxy.tele2.se",
+                "MMS-port: 8080",
+                "MCC: 240",
+                "MNC: 07",
+                "Verifieringstyp: Ingen",
+                "APN-typ: default,supl,mms",
+                "APN-protokoll: IPv4/IPv6",
+                "APN-roamingprotokoll: IPv4/IPv6",
+                "Operatör: Ospecificerad",
+                "Typ av mobiloperatör för det virtuella nätverket: Ingen"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kategori": "Surf",
+      "problem": [
+        {
+          "namn": "Kan inte surfa",
+          "checklistor": [
+            "Kontrollera att abonnemanget är aktivt och har ett datapaket",
+            "Kontrollera att man inte har förbrukat all data",
+            "Kontrollera att det inte finns någon spärr för datatrafik",
+            "Be användaren att kontrollera att mobildata är aktiverat i sin telefon",
+            "Kontrollera att APN-inställningarna är korrekt. Alternativt testa med annat APN (internet.tele2.se / 4g.tele2.se)",
+            "Be användaren att nollställa nätverksinställningarna i telefonen"
+          ]
+        },
+        {
+          "namn": "Långsamma hastigheter",
+          "checklistor": [
+            "Om problemet är platsrelaterat, se checklistan 'Täckning'",
+            "Kontrollera att abonnemanget har ett datapaket",
+            "Kontrollera att man inte har förbrukat all data",
+            "Kontrollera att det inte finns någon spärr för datatrafik",
+            "Be användaren att nollställa nätverksinställningarna i telefonen"
+          ]
+        }
+      ]
+    },
+    {
+      "kategori": "Tele2 Open",
+      "problem": [
+        {
+          "namn": "MMS iPhone - T2 Open",
+          "checklistor": [
+            "Kontrollera att användaren har data-roaming aktiverat i sin telefon",
+            {
+              "title": "Kontrollera APN-inställaningar. Detta hittas på telefonen enligt nedan:",
+              "subList": ["Inställningar > Mobilnät > Mobilt datanätverk"]
+            },
+            {
+              "title": "Mobildata",
+              "subList": [
+                "APN: internet.tele2.se",
+                "Användarnamn: wap",
+                "Lösenord: *blankt*"
+              ]
+            },
+            {
+              "title": "MMS",
+              "subList": [
+                "APN: internet.tele2.se",
+                "Användarnamn: wap",
+                "Lösenord: *blankt*",
+                "MMSC: http://mmsc.tele2.se",
+                "MMS-proxy: mmsproxy.tele2.se:8080",
+                "MMS-maxstorlek: 307200",
+                "MMS UA Prof URL: *blankt*"
+              ]
+            },
+            {
+              "title": "Internetdelning",
+              "subList": [
+                "APN: internet.tele2.se",
+                "Användarnamn: wap",
+                "Lösenord: *blankt*"
+              ]
+            }
+          ]
+        },
+        {
+          "namn": "MMS Samsung - T2 Open",
+          "checklistor": [
+            "Kontrollera att användaren har data-roaming aktiverat i sin telefon",
+            {
+              "title": "Kontrollera APN-inställaningar. Detta hittas på telefonen enligt nedan:",
+              "subList": [
+                "Inställningar > Anslutningar > Mobilnätverk > Åtkomstpunktsnamn"
+              ]
+            },
+            "Om användaren redan gått igenom manualen för Tele2 Open och fortfarande har problem kan man testa att radera samtliga APN, därefter lägga upp ett nytt enligt nedan",
+            {
+              "title": "APN-inställningar för Tele2 Open:",
+              "subList": [
+                "Namn: Tele2 Services",
+                "APN: internet.tele2.se",
+                "Proxy: *inte inställt*",
+                "Port: *inte inställt*",
+                "Användarnamn: *inte inställt*",
+                "Lösenord: *inte inställt*",
+                "MMSC: http://mmsc.tele2.se",
+                "MMS-proxy: mmsproxy.tele2.se",
+                "MMS-port: 8080",
+                "MCC: 248",
+                "MNC: 03",
+                "Verifieringstyp: Ingen",
+                "APN-typ: default,supl,mms",
+                "APN-protokoll: IPv4",
+                "APN-roamingprotokoll: IPv4",
+                "Operatör: Ospecificerad",
+                "Typ av mobiloperatör för det virtuella nätverket: IMSI",
+                "Värde för det virtuella nätverkets mobiloperatör: 24803005x"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kategori": "Täckning",
+      "problem": [
+        {
+          "namn": "Allmänt - Täckning",
+          "checklistor": [
+            "Kontrollera att det inte finns några driftstörningar i täckningskartan (MIM / Arthur)",
+            "Det är även bra att kontrollera om flera enheter som använder Tele2s nät upplever samma problem. Om det enbart är en enhet som upplever problem, så kan felet ligga i hårdvara eller SIM-kort",
+            {
+              "title": "Kontrollera användarens adress",
+              "subList": [
+                "Hur långt är det till närmsta mast? Tryck 'Visa best-server-lista' för att se avstånd i meter",
+                "Här kan man även se en ungefärlig signalstyrka som man kan förvänta sig på adressen. Ha då i åtanke att Arthur inte tar hänsyn till eventuell terräng och byggnader som befinner sig emellan masten och positionen. Inte heller om användaren skulle befinna sig inomhus"
+              ]
+            },
+            {
+              "title": "Tolka värden för 'Visa best-server-lista'",
+              "subList": [
+                "Detta räknas i dBm och man vill ligga så nära 0dBm som möjligt.",
+                "-50dBm till -79dBm | Mycket god signalstyrka",
+                "-80dBm till -89dBm | God signalstyrka",
+                "-90dBm till -99dBm | Okej signalstyrka",
+                "-100dBm och lägre | Dålig signalstyrka"
+              ]
+            }
+          ]
+        },
+        {
+          "namn": "Checklista - Täckning",
+          "checklistor": [
+            {
+              "title": "Här finns några tips som kan hjälpa en i rätt riktning när man ska felsöka täckning",
+              "subList": [
+                "Hur fungerar det utanför byggnaden?",
+                "Fungerar det dåligt i hela byggnaden eller bara i vissa rum?",
+                "Hur länge har det varit dåligt?",
+                "Vad händer i samtalet? Hackar, brus, samtalet klipper mm.",
+                "Har alla Tele2 användare samma problem på adressen?",
+                "Ta samtalsexempel och spåra. Vilken mast kopplar man upp sig mot? Flera olika master?",
+                "Kolla statistik på masten. Ser vi någon förändring i statistiken relaterat till datumet problem började?",
+                "Kommer det att byggas nya master eller uppgraderas inom närtid?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kategori": "SMS",
+      "problem": [
+        {
+          "namn": "Inkommande/utgående SMS",
+          "checklistor": [
+            "Kontrollera SMSC. Ser vi något annorlunda?",
+            "Kontrollera att VoLTE är aktivt på abonnemanget & telefon",
+            "Om VoLTE redan är aktivt, testa att omprovisionera VoLTE",
+            "Be användaren göra en nätverksåterställning på sin telefon",
+            "Be användare testa SIM-kort i annan telefon",
+            "Byt SIM-kort på abonnemanget"
+          ]
+        },
+        {
+          "namn": "Upprepade SMS",
+          "checklistor": [
+            "Kontrollera att VoLTE är aktivt på abonnemanget & telefon",
+            "Om VoLTE redan är aktivt, testa att omprovisionera VoLTE",
+            "Byt SIM-kort på abonnemanget",
+            "Be användaren göra en nätverksåterställning på sin telefon",
+            "Be användare testa SIM-kort i annan telefon"
+          ]
+        },
+        {
+          "namn": "Fördröjda SMS",
+          "checklistor": [
+            "Kontrollera SMSC. Ser vi något annorlunda?",
+            "Om det är platsrelaterat kan det bero på bristande täckning. Se checklistan 'Täckning'",
+            "Kontrollera att VoLTE är aktivt på abonnemanget & telefon",
+            "Om VoLTE redan är aktivt, testa att omprovisionera VoLTE",
+            "Be användaren göra en nätverksåterställning på sin telefon",
+            "Be användare testa SIM-kort i annan telefon",
+            "Byt SIM-kort på abonnemanget"
+          ]
+        }
+      ]
+    },
+    {
+      "kategori": "Roaming",
+      "problem": [
+        {
+          "namn": "Allmänt - Roaming",
+          "checklistor": [
+            "Kontrollera att det inte finns någon spärr på abonnemanget",
+            "Kontrollera att data-roaming är aktiverat i telefonen",
+            {
+              "title": "Be användaren att testa låsa mot olika lokala operatörer. Vissa av dessa fungerar inte, då vi inte har avtal med samtliga operatörer",
+              "subList": [
+                "iPhone: Inställningar > Mobilnät > Val av nätverk > Stäng av Automatisk > Testa de olika operatörerna",
+                "Samsung: Inställningar > Anslutningar > Mobilnätverk > Nätverksoperatörer > Inaktivera 'Välj automatiskt' > Testa de olika operatörerna"
+              ]
+            },
+            {
+              "title": "Be användaren att testa låsa telefonen i olika nätlägen",
+              "subList": [
+                "iPhone: Inställningar > Mobilnät > Alternativ för mobildata > Röst och data > Testa de olika alternativen",
+                "Samsung: Inställningar > Anslutningar > Mobilnätverk > Nätläge > Testa de olika alternativen"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kategori": "Klockab.",
+      "problem": [
+        {
+          "namn": "Allmänt - Klocka",
+          "checklistor": [
+            {
+              "title": "Testa LTE-funktion på klockan",
+              "subList": [
+                "Istället för att aktivera flygplansläge på telefonen är det bättre att stänga av den helt och inaktivera Bluetooth och Wi-Fi på klockan",
+                "Flygplansläge kan göra att även klockan tappar nätkontakt. Därmed är det bättre att testa funktion enligt ovan punkt"
+              ]
+            }
+          ]
+        },
+        {
+          "namn": "Beställa klockabonnemang",
+          "checklistor": [
+            "Denna checklista förutsätter att klockan har LTE-funktion & att telefon är uppdaterad till senaste mjukvara",
+            "Kontrollera att \"Tillåt beställning av klockabonnemang\" är aktiverat i Melody",
+            "Kontrollera att abonnemanget & telefonen har VoLTE aktiverat",
+            "Användaren behöver vara uppkopplad mot Wi-Fi vid aktiveringen av klockabonnemanget",
+            "Kontrollera att SIM-kortet inte är för gammalt. Vid gammalt SIM-kort kommer användaren inte kunna beställa klockabonnemang",
+            "Om beställningssidan blir helt vit eller inte visas alls, trots att allt annat ser korrekt ut, kan du höra med Application Support. Det kan handla om en driftstörning eller annat fel som orsakar detta, vilket i så fall hanteras av dem",
+            "Får användaren ett felmeddelande som säger \"Klockabonnemang kan inte beställas till detta abonnemang\" även fast \"Tillåt beställning av klockabonnemang\" är aktiverat i Melody, kan det bero på att användaren har dubbla SIM-kort i telefonen. I dessa scenarion brukar telefonen försöka installera klockabonnemanget på det andra abonnemanget. Ta därför ut/inaktivera det andra SIM-kortet under beställningen av klockabonnemang"
+          ]
+        }
+      ]
+    },
+    {
+      "kategori": "Kalenderint.",
+      "problem": [
+        {
+          "namn": "Kalender synkar inte - enstaka användare",
+          "checklistor": [
+            "Kontrollera Future Precense i MiCloud. Har några Exchange-bokningar synkat?",
+            {
+              "title": "Om de har synkat:",
+              "subList": [
+                "Då bör det inte vara några problem med själva kopplingen, utan det kanske handlar om något annat",
+                "Oftast, i dessa fallen, handlar det om att användaren upplever att folk ringer igenom trots att man har bokat möte i Outlook. I så fall får man se över om användaren har Nummerseparering aktiverat och förklara funktionen"
+              ]
+            },
+            {
+              "title": "Om de inte har synkat:",
+              "subList": [
+                "Kontrollera att Kalenderintegration är aktiverat i Melody",
+                "Dubbelkolla med användaren att de verkligen har lagt upp en bokning där de har status Upptagen i sin kalender. Tele2 Växel reagerar på vissa nyckelord i rubriken för bokningen, samt vilken status man har. Du ser exakt vad kundens växel reagarar på under Services > Precense State Authorization",
+                "Vill man djupdyka lite så kan man kika på Calendar-sync loggen som man hittar under System View",
+                "Sista steget är att kolla med BVO varför bokningen inte synkas. De kommer vilja att vi ger dem minst ett exempel på bokning som inte synkas"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

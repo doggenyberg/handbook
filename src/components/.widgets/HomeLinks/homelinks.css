@@ -1,0 +1,35 @@
+.widget.home-links {
+  padding: 0.4rem;
+}
+
+.home-links ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.widget .link {
+  width: 50px;
+  border-radius: 60px;
+  transition: all 50ms ease-in-out;
+}
+
+.widget li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  transition: all 50ms ease-in-out;
+}
+
+.widget li:hover {
+  color: var(--color-accent-500);
+}
+
+.widget li:hover img {
+  transform: scale(1.05);
+  outline: 3px var(--color-accent-500) solid;
+}

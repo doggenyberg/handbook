@@ -1,0 +1,5 @@
+.info.widget {
+  grid-row: 4;
+  grid-column: 1 / span 3;
+  align-items: center;
+}

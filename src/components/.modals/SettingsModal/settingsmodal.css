@@ -1,0 +1,33 @@
+#settings-button {
+  color: var(--color-main-200);
+  transition: all 100ms ease-in-out;
+}
+
+#settings-modal form {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+#settings-modal input {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 12px;
+  border-radius: 15px;
+  border: none;
+}
+
+#settings-modal input:focus {
+  outline: var(--color-accent-300) solid 2px;
+}
+
+#settings-modal button {
+  font-size: 1rem;
+  width: 70px;
+  border: none;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: var(--color-nav-500);
+}

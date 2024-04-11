@@ -1,0 +1,55 @@
+nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-500);
+  gap: 20px;
+  user-select: none;
+}
+
+nav h1 {
+  padding: 1rem 2rem;
+  font-weight: 600;
+  color: var(--color-main-100);
+  background-color: var(--color-bg-600);
+  margin-bottom: 10px;
+}
+
+nav span {
+  color: var(--color-accent-500);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  color: var(--color-main-100);
+  font-weight: 600;
+  list-style-type: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 50ms ease-in;
+}
+nav ul li:hover {
+  background-color: var(--color-bg-400);
+  color: var(--color-accent-300);
+}
+
+.route-link {
+  text-decoration: none;
+}
+
+.nav-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+}

@@ -1,0 +1,30 @@
+.home-page {
+  margin-top: 50px;
+}
+
+.home-links {
+  grid-row: 1;
+  grid-column: 1;
+  width: 100%;
+}
+
+.home-widgets {
+  padding: 20px 20px;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 130px 150px;
+  grid-template-columns: 290px 240px 240px;
+  gap: 2rem;
+  user-select: none;
+}
+
+/* .home-page .top {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 85%;
+  grid-row: 1;
+  grid-column: 1 / span 3;
+  justify-content: space-between;
+  margin-bottom: 20px;
+} */

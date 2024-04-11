@@ -1,0 +1,102 @@
+.sub-form {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  grid-template-rows: 127px 127px auto;
+  gap: 15px;
+  align-items: flex-end;
+  padding-top: 30px;
+}
+
+.sub-form .form-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.sub-form .form-top label {
+  margin-bottom: 0;
+  user-select: none;
+}
+
+.sub-form button {
+  margin-top: 20px;
+  justify-self: center;
+  align-self: center;
+  grid-row: 3;
+  grid-column: 1 / span 2;
+  width: 120px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 0;
+  background-color: var(--color-accent-400);
+  -webkit-box-shadow: 4px 2px 10px 4px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 4px 2px 10px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 2px 10px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+}
+
+.sub-form button:hover {
+  background-color: var(--color-accent-300);
+}
+
+.example-btn {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.sub-form .error-message {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
+  padding: 10px 25px;
+  font-weight: 600;
+  background-color: #d35353;
+  border-radius: 10px;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 200ms ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.sub-form .error-message.error-show {
+  visibility: visible;
+  opacity: 100%;
+  top: -20px;
+}
+
+.sub-form .save-message {
+  border-radius: 10px;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 200ms ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  background-color: var(--color-nav-500);
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
+  padding: 10px 25px;
+  font-weight: 600;
+}
+
+.sub-form .save-message.save-show {
+  opacity: 100%;
+  top: -20px;
+  visibility: visible;
+}

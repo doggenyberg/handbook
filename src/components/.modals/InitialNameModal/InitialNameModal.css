@@ -1,0 +1,75 @@
+#initial-name-modal .modal-body {
+  align-items: flex-start;
+}
+
+#initial-name-modal .modal-overlay {
+  background-color: var(--color-bg-800);
+}
+
+#initial-name-modal .subject {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  line-height: 1.5rem;
+}
+
+#initial-name-modal .subject ul {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+#initial-name-modal .subject li {
+  list-style-type: circle;
+}
+
+#initial-name-modal .subject.name {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: var(--color-main-800);
+  border-radius: 10px;
+}
+
+#initial-name-modal .subject.name form {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#initial-name-modal .subject.name input {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+}
+
+#initial-name-modal .subject.name input:focus {
+  outline: var(--color-accent-300) solid 2px;
+}
+
+#initial-name-modal .subject.name button {
+  width: 100px;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 15px;
+  background-color: var(--color-nav-500);
+}
+
+#initial-name-modal h2 {
+  color: var(--color-main-100);
+  font-size: 2rem;
+}
+
+#initial-name-modal span {
+  color: var(--color-accent-500);
+}
+
+#initial-name-modal h4 {
+  color: var(--color-accent-300);
+}
+
+#initial-name-modal p {
+  color: #efefef;
+}

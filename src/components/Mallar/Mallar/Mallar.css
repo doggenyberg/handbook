@@ -1,0 +1,107 @@
+.mallar-page {
+  margin-top: 10px;
+}
+
+.mallar-container {
+  padding: 0 20px;
+  
+}
+
+.mallar {
+  display: flex;
+  border-radius: 10px;
+  user-select: none;
+  height: 440px;
+  width: 800px;
+  overflow: hidden;
+  -webkit-box-shadow: 4px 2px 10px 4px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 4px 2px 10px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 2px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+.mallar-nav {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgb(34, 34, 43);
+  background: linear-gradient(
+    45deg,
+    rgba(34, 34, 43, 1) 0%,
+    rgba(63, 63, 75, 1) 100%
+  );
+}
+
+.mallar-nav li {
+  display: grid;
+  place-items: center;
+  list-style-type: none;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  background-color: var(--color-accent-200);
+  color: var(--color-main-600);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+}
+
+.mallar-nav li:hover {
+  background-color: var(--color-accent-100);
+}
+
+.mallar-content {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  background: rgb(39, 38, 48);
+  background: linear-gradient(
+    45deg,
+    rgba(39, 38, 48, 1) 0%,
+    rgba(69, 68, 92, 1) 100%
+  );
+  width: 100%;
+}
+
+.mallar-content .none-selected {
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 1.25rem;
+}
+
+.mallar-content .mall-canvas {
+  width: 600px;
+  padding: 20px;
+  background-color: var(--color-main-100);
+  color: var(--color-main-800);
+  flex-grow: 1;
+  resize: none;
+  outline: none !important;
+  border: none;
+  font-size: 0.85rem;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 5px;
+  height: 320px;
+  user-select: text;
+  font-size: 0.85rem;
+}
+
+.mallar-content button {
+  padding: 10px 20px;
+  background-color: var(--color-nav-600);
+  color: var(--color-main-100);
+  font-size: 0.9rem;
+  font-weight: 400;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.mallar-content button:hover {
+  background-color: var(--color-nav-500);
+}

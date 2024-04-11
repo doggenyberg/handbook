@@ -1,0 +1,80 @@
+#report-button {
+  color: var(--color-error);
+  transition: all 100ms ease-in-out;
+}
+
+#report-button:hover {
+  color: var(--color-error-hover);
+}
+
+#report-modal .modal-body {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+#report-modal .modal-body form {
+  display: grid;
+  padding: 30px 20px;
+  border-radius: 15px;
+  gap: 20px;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: repeat(3, auto);
+  background-color: var(--color-main-800);
+}
+
+#report-modal form input,
+#report-modal form textarea,
+#report-modal form select {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8rem;
+}
+
+#report-modal form input[type="text"] {
+  grid-row: 1;
+  grid-column: 1 / span 2;
+}
+
+#report-modal form select {
+  grid-row: 2;
+  grid-column: 1;
+  height: 35px;
+}
+
+#report-modal form input[type="file"] {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+#report-modal form textarea {
+  grid-row: 3;
+  grid-column: 1 / span 2;
+  resize: none;
+  height: 70px;
+}
+
+#report-modal form button {
+  margin-top: 10px;
+  grid-row: 4;
+  grid-column: 1 / span 2;
+  padding: 0.5rem 2rem;
+  justify-self: center;
+  background-color: var(--color-accent-500);
+  color: var(--color-main-600);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Poppins";
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 100ms ease-out;
+}
+
+#report-modal form button:hover {
+  background-color: var(--color-accent-300);
+}

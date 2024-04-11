@@ -1,0 +1,35 @@
+ul.checklistor {
+  display: flex;
+  padding: 20px;
+  border-radius: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 544px;
+}
+
+ul.checklistor .modal-btn {
+  padding: 10px;
+  width: 120px;
+  height: 120px;
+  display: grid;
+  font-weight: 500;
+  place-items: center;
+  background: rgb(187,210,190);
+  background: -moz-linear-gradient(45deg, rgba(187,210,190,1) 0%, rgba(210,235,213,1) 50%, rgba(224,244,227,1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(187,210,190,1) 0%, rgba(210,235,213,1) 50%, rgba(224,244,227,1) 100%);
+  background: linear-gradient(45deg, rgba(187,210,190,1) 0%, rgba(210,235,213,1) 50%, rgba(224,244,227,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bbd2be",endColorstr="#e0f4e3",GradientType=1); 
+  color: var(--color-accent-900);
+  list-style-type: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all ease-out 100ms;
+  text-wrap: wrap;
+  -webkit-box-shadow: 4px 2px 10px 4px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 4px 2px 10px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 2px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+ul.checklistor .modal-btn:hover {
+  transform: scale(1.2);
+}

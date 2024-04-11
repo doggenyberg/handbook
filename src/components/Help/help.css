@@ -1,0 +1,30 @@
+.help-page {
+  padding: 0 50px;
+  justify-self: flex-start;
+}
+
+.help-page .top {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.help-page .help-body {
+  display: flex;
+  padding: 0 20px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.help-body .question {
+  color: var(--color-main-100);
+  max-width: 700px;
+  background-color: var(--color-bg-600);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.help-body .question h5 {
+  color: var(--color-accent-300);
+  font-size: 1rem;
+  margin-bottom: 5px;
+}

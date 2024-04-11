@@ -1,0 +1,148 @@
+#checklista-modal {
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 564px;
+}
+
+.modal .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.modal .modal-top .buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.modal .checklista-categories {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 450px;
+  background-color: var(--color-main-900);
+  border-radius: 10px;
+  user-select: none;
+}
+
+.modal .checklista-categories > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  padding: 5px 10px;
+  background: none;
+  color: var(--color-bg-100);
+  text-align: start;
+  border-radius: 0;
+  border-bottom: 1px solid var(--color-main-700);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+
+.modal .checklista-categories li.selected {
+  background-color: var(--color-main-700);
+}
+
+.modal .checklista-categories li.selected:hover {
+  background-color: var(--color-main-600);
+}
+
+.modal .checklista-categories li span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-main-500);
+}
+
+.modal .checklista-categories li:hover {
+  background-color: var(--color-main-800);
+  transform: scale(1.01);
+}
+
+.modal .checklista-categories :first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal .checklista-categories :last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: none;
+}
+
+.modal .checklista-frame {
+  width: 500px;
+  height: 400px;
+  overflow-y: scroll;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  padding-right: 12px;
+  background-color: var(--color-main-800);
+  border-radius: 10px;
+  border: 6px solid var(--color-main-800);
+}
+
+.modal .checklista-frame li {
+  height: auto;
+  width: 100%;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 10px;
+  background-color: var(--color-main-700);
+  color: var(--color-main-100);
+  cursor: default;
+  font-size: 1rem;
+  font-weight: 500;
+  user-select: text;
+  cursor: text;
+}
+
+.modal .checklista-frame li:hover {
+  background-color: var(--color-main-500);
+  color: var(--color-main-100);
+}
+
+.modal .checklista-frame .sub-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.modal .checklista-frame .sub-list .sub-item {
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0;
+  text-align: start;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-left: 25px;
+  color: var(--color-main-200);
+  background: none;
+}
+
+.modal .checklista-frame .sub-list .sub-item::after {
+  font-size: 25px;
+  content: "‣";
+  position: absolute;
+  left: 10px;
+  top: -9px;
+}
+
+.modal .checklista-frame .sub-list .sub-item a {
+  color: var(--color-main-100);
+}

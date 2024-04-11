@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg-100: #d2d2d2;
+  --color-bg-200: #a6a6a6;
+  --color-bg-300: #797979;
+  --color-bg-400: #4d4d4d;
+  --color-bg-500: #202020;
+  --color-bg-600: #1a1a1a;
+  --color-bg-700: #131313;
+  --color-bg-800: #0d0d0d;
+  --color-bg-900: #060606;
+
+  --color-nav-100: #e6e6ff;
+  --color-nav-200: #cccdff;
+  --color-nav-300: #b3b5ff;
+  --color-nav-400: #999cff;
+  --color-nav-500: #8083ff;
+  --color-nav-600: #6669cc;
+  --color-nav-700: #4d4f99;
+  --color-nav-800: #333466;
+  --color-nav-900: #1a1a33;
+
+  --color-main-100: #d7d6d9;
+  --color-main-200: #aeaeb3;
+  --color-main-300: #86858e;
+  --color-main-400: #5d5d68;
+  --color-main-500: #353442;
+  --color-main-600: #2a2a35;
+  --color-main-700: #201f28;
+  --color-main-800: #15151a;
+  --color-main-900: #0b0a0d;
+
+  --color-accent-100: #e9f5ea;
+  --color-accent-200: #d2ebd5;
+  --color-accent-300: #bce1c1;
+  --color-accent-400: #a5d7ac;
+  --color-accent-500: #8fcd97;
+  --color-accent-600: #72a479;
+  --color-accent-700: #567b5b;
+  --color-accent-800: #39523c;
+  --color-accent-900: #1d291e;
+
+  --color-error: #d26868;
+  --color-error-hover: #d28f8f;
+
+  --color-info: #faff9d;
+  --color-info-hover: #fcffd4;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: var(--color-bg-800);
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  ::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: #393939;
+  }
+  ::-webkit-scrollbar {
+    height: 12px;
+    width: 5px;
+    background: var(--color-main-800);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-main-400);
+    -webkit-border-radius: 1ex;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: var(--color-main-800);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+#root {
+  max-width: 1300px;
+  display: flex;
+  flex-grow: 1;
+  color: var(--color-main-100);
+  height: 695px;
+  border-radius: 10px;
+  overflow: hidden;
+  outline: var(--color-nav-00) 3px solid;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  user-select: none;
+}
+
+
+.page .top p {
+  color: var(--color-bg-200);
+}

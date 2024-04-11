@@ -1,0 +1,71 @@
+.modal p {
+  padding: 0;
+  background: none;
+  border-radius: 0;
+}
+
+.modal .eskalera-frame {
+  width: 550px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--color-main-100);
+  color: var(--color-main-900);
+  user-select: text;
+}
+
+.modal .buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#copy-btn {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: var(--color-accent-400);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 100ms ease-in-out;
+  font-family: "Open Sans", sans-serif;
+}
+
+#copy-btn:hover {
+  background-color: var(--color-accent-300);
+}
+
+#submit-btn {
+  position: relative;
+}
+
+.eskalera-modal .eskalera-info {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.eskalera-modal .modal-body .buttons {
+  align-self: center;
+  width: 150px;
+}
+
+.eskalera-modal .error-message-eskalera {
+  display: flex;
+  color: var(--color-main-100);
+  padding: 10px 155px;
+  position: absolute;
+  font-weight: 600;
+  background-color: #d35353;
+  border-radius: 10px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 200ms ease-in-out;
+  opacity: 0;
+  flex-grow: 0;
+}
+
+.eskalera-modal .error-message-eskalera.error-show-eskalera {
+  opacity: 100%;
+  top: 20px;
+}
