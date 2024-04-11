@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ListItem from "../../.widgets/Favourites/ListItem/ListItem";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import "../ChecklistaModal/checklistamodal.css";
+import "../ChecklistaModal/ChecklistaModal.css";
 import { motion } from "framer-motion";
 
 const FavouriteModal = ({ item, onDelete }) => {
