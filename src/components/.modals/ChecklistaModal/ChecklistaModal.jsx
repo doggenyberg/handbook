@@ -1,6 +1,6 @@
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import "/src/components/.modals/modal.css";
-import "./checklistamodal.css";
+import "./ChecklistaModal.css";
 import { useState } from "react";
 import SaveButton from "./SaveButton/SaveButton";
 import { motion } from "framer-motion";
